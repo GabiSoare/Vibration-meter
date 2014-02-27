@@ -25,4 +25,9 @@ function onError() {
     alert('onError!');
 };
 
-navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+
+setInterval(getAcc,300);
+
+function getAcc(){
+	navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+}
